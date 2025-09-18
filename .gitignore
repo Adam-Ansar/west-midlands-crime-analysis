@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.joblib
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data files (ignore large files, keep samples)
+data/raw/*.csv
+!data/raw/*sample*.csv
+data/raw/*.parquet
+!data/raw/*sample*.parquet
+data/processed/*.csv
+!data/processed/*sample*.csv
+data/processed/*.parquet
+!data/processed/*sample*.parquet
+
+data/raw/*.zip
+data/processed/*.zip
+
+# Visuals
+visuals/*.png
+visuals/*.jpg
+visuals/*.jpeg
+visuals/*.svg
+
+# Metadata
+metadata/*.json
+metadata/*.yml
+metadata/*.yaml
