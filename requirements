@@ -8,6 +8,7 @@ charset-normalizer==3.4.1
 discord.py==2.5.2
 frozenlist==1.5.0
 idna==3.10
+joblib==1.5.2
 multidict==6.3.2
 numpy==2.3.1
 packaging==25.0
@@ -18,9 +19,11 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.1.0
 pytz==2025.2
 requests==2.32.3
+scikit-learn==1.7.2
 scipy==1.16.0
 six==1.17.0
 statsmodels==0.14.5
+threadpoolctl==3.6.0
 tzdata==2025.2
 urllib3==2.3.0
 wheel==0.45.1

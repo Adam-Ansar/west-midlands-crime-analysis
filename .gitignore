@@ -26,10 +26,6 @@ Thumbs.db
 *.log
 
 # Data files (ignore large files, keep samples)
-data/raw/*.csv
-!data/raw/*sample*.csv
-data/raw/*.parquet
-!data/raw/*sample*.parquet
 data/processed/*.csv
 !data/processed/*sample*.csv
 data/processed/*.parquet
