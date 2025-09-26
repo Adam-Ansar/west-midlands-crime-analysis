@@ -93,7 +93,6 @@ This analysis is based on open police data, which has several constraints:
 - Only 13 months of data (limits advanced forecasting)
 
 👉 Full discussion is in `limitations.ipynb`
-
 ---
 
 ## 🚀 How to Run
@@ -109,7 +108,13 @@ This analysis is based on open police data, which has several constraints:
     pip install -r requirements.txt
     ```
 
-3. **Place the raw monthly CSVs in `data/raw/`.**
+---
+
+## 📂 Data
+
+All required raw CSV files are provided in the [`data/raw/`](data/raw/) directory of this repository.  
+You do **not** need to download any additional data to run the analysis.
+
 
 4. **Run the notebooks in this order:**
     1. `data_cleaning.ipynb`
