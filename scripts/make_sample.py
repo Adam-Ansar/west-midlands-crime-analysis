@@ -3,8 +3,13 @@ import os
 
 def make_sample(input_file, output_file, n=5000, random_state=42):
     # Load cleaned data
-    df = pd.read_csv(input_file)
-    # Take a random sample
+    try:
+        df = pd.read_csv(input_file)
+    except FileNotFoundError:
+        print(f"Input file not found: {input_file}")
+        return
+    # Take a random sample (handle if n > len(df))
+    n = min(n, len(df))
     sample_df = df.sample(n=n, random_state=random_state)
     # Ensure output directory exists
     os.makedirs(os.path.dirname(output_file), exist_ok=True)

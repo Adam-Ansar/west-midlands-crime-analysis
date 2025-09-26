@@ -9,13 +9,21 @@ def combine_csvs(input_folder, output_file):
         print(f"No CSV files found in {input_folder}.")
         return
     # Load and concatenate all CSVs
-    df_list = [pd.read_csv(f) for f in csv_files]
+    df_list = []
+    for f in csv_files:
+        try:
+            df_list.append(pd.read_csv(f))
+        except Exception as e:
+            print(f"Error reading {f}: {e}")
+    if not df_list:
+        print("No CSVs could be loaded.")
+        return
     combined_df = pd.concat(df_list, ignore_index=True)
     # Ensure output directory exists
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     # Save combined DataFrame
     combined_df.to_csv(output_file, index=False)
-    print(f"Combined {len(csv_files)} files. Output: {output_file} (Rows: {combined_df.shape[0]})")
+    print(f"Combined {len(df_list)} files. Output: {output_file} (Rows: {combined_df.shape[0]})")
 
 if __name__ == "__main__":
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

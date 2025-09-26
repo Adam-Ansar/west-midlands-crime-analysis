@@ -3,7 +3,11 @@ import os
 
 def clean_data(input_file, output_file):
     # Load combined data
-    df = pd.read_csv(input_file)
+    try:
+        df = pd.read_csv(input_file)
+    except FileNotFoundError:
+        print(f"Input file not found: {input_file}")
+        return
 
     # Drop context column as it's empty
     if 'Context' in df.columns:
@@ -11,7 +15,7 @@ def clean_data(input_file, output_file):
 
     # Convert 'Month' to datetime
     if 'Month' in df.columns:
-        df["Month"] = pd.to_datetime(df["Month"])
+        df["Month"] = pd.to_datetime(df["Month"], errors='coerce')
 
     # Remove duplicates
     df = df.drop_duplicates()
