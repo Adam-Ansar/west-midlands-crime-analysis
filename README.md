@@ -137,4 +137,5 @@ You do **not** need to download any additional data to run the analysis.
 ## 🙌 Credits
 
 - **Data:** West Midlands Police Open Data
-- **Analysis & code:** Adam Ansar, and CoPilot.
+- **Analysis & code:** Adam Ansar  
+    Generative AI was used in a limited way to help clean code, support the workflow, and offer some deeper insights.
